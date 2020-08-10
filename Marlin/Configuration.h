@@ -544,10 +544,15 @@
   //#define MIN_BED_POWER 0
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
+  // 24V Prusa MK52 Heated Bed Clone (AliExpress) No Fan
+  // #define DEFAULT_bedKp 17.68
+  // #define DEFAULT_bedKi 0.30
+  // #define DEFAULT_bedKd 686.36
+
   // 24V Prusa MK52 Heated Bed Clone (AliExpress)
-  #define DEFAULT_bedKp 18.02
-  #define DEFAULT_bedKi 0.28
-  #define DEFAULT_bedKd 764.02
+  #define DEFAULT_bedKp 24.95
+  #define DEFAULT_bedKi 0.45
+  #define DEFAULT_bedKd 931.88
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
@@ -1003,7 +1008,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 35, 8, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { 35, 8, -6.73 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
